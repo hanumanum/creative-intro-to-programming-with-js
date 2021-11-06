@@ -1,3 +1,6 @@
+
+
+
 function setup() {
     let x = 50
     let y = 50
@@ -9,4 +12,6 @@ function setup() {
 
     rect(x, y, w, w)
     rect(x + padding, y, w, w)
+
+    //write your code here
 }

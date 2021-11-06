@@ -1,29 +1,23 @@
-//=====Variables, փոփոխականներ
 
-//====Operators, գործողություններ
-//Հանրահաշվական օպերատորներ (+, -, *, /, **)
-//Տողերի գումարում (+)
-//Վերագրման օպերատորներ (+=, -=, *=, /=)
-//Համեմատության օպերատորներ (>,  <, ==, !=,  >=, <=)
-//Ինկրիմենտ դեկրիմենտ (++, --)
 
-//=====let և const
+//Numbers
+100
+100.25
+
+//Strings
+//"բարև"
+//'hi'
+//`aaksdfa asdf asdf asdf asd`
+//"asdfasd " + "sdafasd" 
+
+//Boolean
+true, false 
 
 
 function setup() {
-    createCanvas(1000, 200)
+    createCanvas(800, 200)
     background("black")
 
-    /*
-    կիրառությունը ներմուծում, prompt(), confirm()
-    text(x1, y1, x2, y2)
-    rect(x, y , w, h)
-    ellipse(x,y, r1, r2)
-    */
+   
+    /* կիրառությունը ներմուծում, prompt(), confirm()*/
 }
-
-//Տիպերի բերում
-//typeof()
-//parseInt(), parseFloat()
-//NaN, isNaN()
-//String(), Number(), Boolean()

@@ -9,4 +9,6 @@ function setup() {
 
     rect(x, y, w, w)
     rect(x, y, w + 2 * padding, w + 2 * padding)
+
+    //write your code here
 }
