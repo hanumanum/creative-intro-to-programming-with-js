@@ -4,6 +4,7 @@ let d = 150
 let canvW = 500
 let canvH = 500
 let dirX = 1
+let dirY = 1
 
 function setup() {
     createCanvas(canvW, canvH)
@@ -17,10 +18,19 @@ function draw() {
     if (x + d / 2 >= canvW) {
         dirX = -1
     }
+
     if (x - d / 2 <= 0) {
         dirX = 1
     }
-    
+
+    if (y + d / 2 >= canvH) {
+        dirY= -1
+    }
+
+    if (y - d / 2 <= 0) {
+        dirY = 1
+    }
+
     x += dirX
-    y += 0.5
+    y += dirY
 }
