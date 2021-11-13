@@ -2,14 +2,32 @@
 //Վերադարձի (return) գաղափարը դրսից
 //Ստեղծում եմ ֆունկցիան, random int-երով ապա վերադարձնում եմ տող return `rgb(${r}, ${g}, ${b})`; 
 
+let h
 
 function setup() {
     createCanvas(500, 500)
-    background("black")
+    let c =  getRandomColor()
+    background(c)
     noStroke()
     frameRate(10)
+
+    h = random(100,200)
+    getRandomColor()
 }
 
 function draw() {
-    
+    let c =  getRandomColor()
+    fill(c)
+    rect(100,200,50,174)     
+
+}
+
+function getRandomColor(){
+    let r =  int(random(0,255))
+    let g = int(random(0,255))
+    let b = int(random(0,255))
+
+    let colo = "rgb(" + r + ", " + g + "," + b + ")"
+    return colo;
+
 }
