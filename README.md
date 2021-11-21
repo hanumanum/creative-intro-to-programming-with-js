@@ -26,3 +26,6 @@ https://github.com/hanumanum/creative-intro-to-programming-with-js/archive/b7e10
 
 ## Start of Lesson 5
 https://github.com/hanumanum/creative-intro-to-programming-with-js/archive/d0b7e668c63ff3cd331f94ac7ade536cf787ff4b.zip
+
+## End of Lesson 6
+https://github.com/hanumanum/creative-intro-to-programming-with-js/archive/6f3bb5644519d408b983b86187bcaf2ffcab01b2.zip
