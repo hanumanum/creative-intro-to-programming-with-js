@@ -1,41 +1,40 @@
-let xS = [50, 20, 30, 100, 120, 300, 450, 600, 500, 650, 730, 830, 50]
-let yS = [60, 100, 300, 150, 380, 150, 400, 100, 50, 300, 500, 50, 100]
+let count = 500 
+let xS = []
+let yS = []
 let clr = []
+let vel = []
 let d = 25
 
 
 function setup() {
-    console.log(xS.length)
     createCanvas(1000, 800)
     background("black")
-    for(let i=0; i<xS.length; i++){
+    
+    
+    for(let i=0; i<count; i++){
+        xS.push(random(10,990))
+        yS.push(random(10,100))
         clr.push(getRandomColor())
+        vel.push(random(1,4))
     }
 
 }
 
 function draw() {
-
-    //console.log(yS)
-    yS = incimentArray(yS)
-    //xS = incimentArray(xS)
+    background("black")
+    yS = incimentArray(yS, vel)
 
     for (let i = 0; i < xS.length; i++) {
         fill(clr[i])
         ellipse(xS[i], yS[i], d)
-        fill("black")
-        text(i, xS[i], yS[i])
     }
-
-    //noLoop()
 }
 
 
-function incimentArray(arr){
+function incimentArray(arr, vel){
     for(let i=0; i<arr.length; i++){
-        arr[i]++
+        arr[i]+=vel[i]
     }
-    //console.log(arr)
     return arr;
 }
 
