@@ -5,11 +5,9 @@ let clr = []
 let vel = []
 let d = 25
 
-
 function setup() {
     createCanvas(1000, 800)
     background("black")
-    
     
     for(let i=0; i<count; i++){
         xS.push(random(10,990))
@@ -17,7 +15,6 @@ function setup() {
         clr.push(getRandomColor())
         vel.push(random(1,4))
     }
-
 }
 
 function draw() {
@@ -29,7 +26,6 @@ function draw() {
         ellipse(xS[i], yS[i], d)
     }
 }
-
 
 function incimentArray(arr, vel){
     for(let i=0; i<arr.length; i++){
