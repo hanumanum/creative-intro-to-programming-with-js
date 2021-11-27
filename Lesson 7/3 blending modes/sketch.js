@@ -11,8 +11,7 @@ function setup() {
 }
 
 function draw() {
-
-
+    
 }
 
 function makeTriCirlce(x, y, centerR, criclesR ) {
