@@ -43,3 +43,12 @@ function getGradientOf(color, startX, startY, w, h) {
 function getRandomFromPalette(palette) {
     return random(palette)
 }
+
+function getRandomsArray(len, min, max) {
+    let randoms = []
+    for (let i = 0; i < len; i++) {
+        randoms.push(int(random(min, max)))
+    }
+
+    return randoms;
+}
