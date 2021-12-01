@@ -1,12 +1,10 @@
-
 function setup() {
     createCanvas(800, 800)
-    noFill()
-    stroke("white")
-    frameRate(5)
+    background("black")
+ 
 }
 
 function draw() {
     background("black")
-
-}
+        
+ }
