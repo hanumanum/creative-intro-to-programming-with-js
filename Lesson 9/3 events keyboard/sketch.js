@@ -33,11 +33,13 @@ function draw() {
 }
 
 function keyPressed() {
-    //key, keyCode
+    //rct.x+=5
+    //console.log(key, keyCode)
+    key, keyCode
 }
 
 function keyReleased() {
-
+    console.log(key, keyCode)
 }
 
 function keyTyped() {

@@ -2,21 +2,26 @@ let w = 800
 let h = 800
 
 //Change this to JSON object 
+let circle1 = {
+    x:400,
+    y:400,
+    r:150,
+    clr:"violet"
+}
 
-let x = 400
-let y = 400
-let r = 150
-let clr = "violet"
+let circle2 = {
+    x:400,
+    y:400,
+    r:80,
+    clr:"red"
+}
 
-let x1 = 400
-let y1 = 400
-let r1 = 80
-let clr1 = "red"
-
-let x2 = 200
-let y2 = 560
-let r2 = 80
-let clr2 = "white"
+let circle3 = {
+    x:200,
+    y:560,
+    r:80,
+    clr:"white"
+}
 
 function setup() {
     createCanvas(w, h)
@@ -26,16 +31,16 @@ function setup() {
 function draw() {
     background("black")
 
-    fill(clr)
-    ellipse(x, y, r)
+    fill(circle1.clr)
+    ellipse(circle1.x,circle1. y, circle1.r)
     
-    fill(clr1)
-    ellipse(x1, y1, r1)
+    fill(circle2.clr)
+    ellipse(circle2.x,circle2. y, circle2.r)
 
-    fill(clr2)
-    ellipse(x2, y2, r2)
+    fill(circle1.clr)
+    ellipse(circle3.x,circle3. y, circle3.r)
 
-    x++
-    x1++
-    x2++
+    circle1.x++
+    circle2.x++
+    circle3.x++
 }
