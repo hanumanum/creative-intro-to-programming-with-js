@@ -2,26 +2,31 @@ let w = 800
 let h = 800
 
 //Change this to CLASS object 
-let circle1 = {
-    x:400,
-    y:400,
-    r:150,
-    clr:"violet"
+
+class Circle{
+    constructor(x, y, r, clr){
+        this.x = x
+        this.y = y
+        this.r = r
+        this.clr = clr
+    }
+
+    moveX(step){
+        this.x+=step
+    }
+
+    decreseRadius(){
+        this.r--
+    }
+    
+    draw(){
+        fill(this.clr)
+        ellipse(this.x, this.y, this.r*2)
+    }
+
 }
 
-let circle2 = {
-    x:400,
-    y:400,
-    r:80,
-    clr:"red"
-}
-
-let circle3 = {
-    x:200,
-    y:560,
-    r:80,
-    clr:"white"
-}
+let c1 = new Circle(100,200,150,"red")
 
 function setup() {
     createCanvas(w, h)
@@ -30,17 +35,7 @@ function setup() {
 
 function draw() {
     background("black")
-
-    fill(circle1.clr)
-    ellipse(circle1.x,circle1. y, circle1.r)
-    
-    fill(circle2.clr)
-    ellipse(circle2.x,circle2. y, circle2.r)
-
-    fill(circle1.clr)
-    ellipse(circle3.x,circle3. y, circle3.r)
-
-    circle1.x++
-    circle2.x++
-    circle3.x++
+    c1.moveX(-1)
+    c1.decreseRadius()
+    c1.draw()
 }
