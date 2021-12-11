@@ -6,21 +6,22 @@ class Player {
         this.clr = clr
         this.d = 50
         this.bullets = []
+        this.movingDir = -2
     }
 
     show() {
+        this.y+=this.movingDir
+        this.y = constrain(this.y, 0, 400)
         fill(this.clr)
         triangle(this.x, this.y, this.x - this.l, this.y - this.l / 2, this.x - this.l, this.y + this.l / 2)
     }
 
     moveUp() {
-        this.y -= this.d
-        this.y = constrain(this.y, 0, 400)
+        this.movingDir = -2
     }
 
     moveDown() {
-        this.y += this.d
-        this.y = constrain(this.y, 0, 400)
+        this.movingDir = 2
     }
 
     fire() {
