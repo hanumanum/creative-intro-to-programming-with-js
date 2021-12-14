@@ -8,7 +8,6 @@ let player = new Player(50, h / 2, 100, "red")
 function setup() {
     createCanvas(w, h)
     background("black")
-    creatNewEnemiesSet()
 }
 
 function draw() {
@@ -45,7 +44,6 @@ function draw() {
         enemies[i].show()
     }
 
-    console.log(player.bullets.length)
     checkCollisions(enemies, player.bullets, 10)
     removeOutsiderBullets(player.bullets)
 }
@@ -93,7 +91,6 @@ function checkCollisions(enemies, bullets, sensitivity) {
         }
     }
 }
-
 
 function removeOutsiderBullets(bullets){
     for(let i=0; i<bullets.length; i++){

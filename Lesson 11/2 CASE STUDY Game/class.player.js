@@ -10,7 +10,7 @@ class Player {
     }
 
     show() {
-        this.y+=this.movingDir
+        this.y += this.movingDir
         this.y = constrain(this.y, 0, 400)
         fill(this.clr)
         triangle(this.x, this.y, this.x - this.l, this.y - this.l / 2, this.x - this.l, this.y + this.l / 2)
