@@ -65,5 +65,54 @@ let obj = {
     ]
 }
 
-//for of
-//for in
+// FOR
+console.log("-------------- for loop -----------------------")
+for (let i = 0; i < obj.users.length; i++) {
+    let fullName = obj.users[i].firstName + " " + obj.users[i].lastName
+    console.log(fullName)
+}
+
+
+console.log("------------ for loop-------------------------")
+for (let i = 0; i < obj.users.length; i++) {
+    let fullName = obj.users[i].firstName + " " + obj.users[i].lastName
+    let emails = ""
+
+    if (obj.users[i].emailAddresses) {
+        emails = obj.users[i].emailAddresses.join(", ")
+    }
+
+    console.log(fullName + ", emails: " + emails)
+}
+
+
+// FOR ARRAYS (iterates over array values, n is value)
+console.log("----------- for ... of loop --------------------------")
+let ddd = [5646, 565, 78, 780, 12, 56, 89, 12, 8555]
+let sum = 0
+for (let n of ddd) {
+    console.log(n)
+    sum+=n
+}
+console.log(sum)
+
+
+// FOR OBJECT (iterates over object kesy, z is key)
+console.log("-------------  for ... in ------------------------")
+let obj1 = {
+        "name": "sonoo",
+        "salary": 56000,
+        "married": false
+}
+for(let z in obj1){
+    console.log(z, obj1[z])
+}
+
+
+console.log("---------------while loop------------------")
+let dddd = [56, 65, 78, 2780, 12, 256, 589, 120, 85]
+let i = 0 
+while(i<dddd.length){
+    console.log(dddd[i])
+    i++
+}

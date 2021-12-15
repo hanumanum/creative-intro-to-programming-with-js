@@ -2,14 +2,34 @@ let obj1 = {
     "employee": {
         "name": "sonoo",
         "salary": 56000,
-        "married": true
+        "married": false
+    },
+    "owner": {
+        "name": "gagoo",
+        "salary": 1000000,
+        "married": undefined
     }
 }
+
+console.log(obj1.employee.married)
+console.log(obj1.employee.salary)
+obj1.employee.married = true
+obj1.employee.salary = 100000
+
+console.log(obj1.employee.married)
+console.log(obj1.employee.salary)
+
+console.log(obj1.owner.salary)
 
 let obj2 = [
     { "name": "Ram", "email": "Ram@gmail.com" },
     { "name": "Bob", "email": "bob32@gmail.com" }
 ]
+
+console.log("-------------------------")
+console.log(obj2[0].email)
+console.log(obj2[1].name)
+
 
 let obj3 = {
     "employees": [
@@ -18,10 +38,11 @@ let obj3 = {
         { "name": "Jai", "email": "jai87@gmail.com" }
     ]
 }
-
+console.log(obj3.employees[1].email)
+console.log(obj3.employees[2].name)
 
 let obj4 = {
-    "Name": "Test",
+    "Name": "Testasteron",
     "Mobile": 12345678,
     "Boolean": true,
     "Pets": ["Dog", "cat"],
@@ -30,6 +51,13 @@ let obj4 = {
         "current Address": "AU"
     }
 }
+
+console.log("----------------------------")
+console.log(obj4.Pets[1])
+console.log(obj4.Address["Permanent address"])
+
+console.log(obj4.Name)
+console.log(obj4["Name"])
 
 
 let obj5 = {
@@ -66,5 +94,14 @@ let obj5 = {
         }
     ]
 }
+
+
+console.log("-----------------------------------------------")
+console.log(obj5.users[1].emailAddresses[1])
+
+if(obj5.users[2].emailAddresses){
+    console.log(obj5.users[2].emailAddresses[1])
+}
+
 
 //let enemy = new Enemy(100,200, 100, "black", 25)

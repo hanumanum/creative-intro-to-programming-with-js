@@ -3,21 +3,29 @@ let h = 400
 
 //https://www.neowsapp.com/
 
-function preload() {
-    const xhttp = new XMLHttpRequest()
-    
-    xhttp.onload = function () {
-        let jsssosnnn = JSON.parse(this.responseText)
-        console.log(jsssosnnn)
-    }
 
-    xhttp.onerror = function (e) {
-        console.log(e)
-    }
+//API - Aplication Programming Interface
+//AJAX - Asyncronous Javascript and XML
 
-    xhttp.open("GET", "https://www.neowsapp.com/rest/v1/feed?detailed=true", true)
-    xhttp.send()
+const xhttp = new XMLHttpRequest() //Creating Request Object
+
+//That to do than recived
+xhttp.onload = function () {
+    let data = this.responseText
+    let parsedData = JSON.parse(data)
+    console.log(parsedData)
 }
+
+//That to do than error occured
+xhttp.onerror = function (e) {
+    console.log(e)
+}
+
+//open connection
+xhttp.open("GET", "https://www.neowsapp.com/rest/v1/feed?detailed=true")
+//open send request
+xhttp.send()
+
 
 function setup() {
     createCanvas(w, h)
@@ -27,4 +35,3 @@ function setup() {
 function draw() {
 
 }
-
